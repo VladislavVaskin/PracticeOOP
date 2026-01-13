@@ -9,15 +9,14 @@ public class MainClass {
         Line l2 = new Line(p3, p4);
         Line l3 = new Line(l1.end, l2.start);
 
-        System.out.println(l3.toString());
+        System.out.println(l3);
 
-        p2 = new Point(12,19);
-        p3 = new Point(13,23);
-        l1 = new Line(p1, p2);
-        l2 = new Line(p3, p4);
-        l3 = new Line(l1.end, l2.start);
+        l3.start.x = 23;
+        l3.start.y = 12;
+        l3.end.x = 31;
+        l3.end.y = 19;
 
-        System.out.println(l3.toString());
+        System.out.println(l3);
 
         double sum = l1.getLength() + l2.getLength() + l3.getLength();
         System.out.println("Сумма длин: " + sum);
