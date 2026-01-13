@@ -11,10 +11,10 @@ public class MainClass {
 
         System.out.println(l3);
 
-        l3.start.x = 23;
+        l3.start.x = 21;
         l3.start.y = 12;
         l3.end.x = 31;
-        l3.end.y = 19;
+        l3.end.y = 17;
 
         System.out.println(l3);
 
