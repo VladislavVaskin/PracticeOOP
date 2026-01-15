@@ -1,24 +1,39 @@
+import java.util.List;
+
 public class MainClass {
     public static void main(String[] args) {
-        Point p1 = new Point(1,3);
-        Point p2 = new Point(5,8);
-        Point p3 = new Point(10,11);
-        Point p4 = new Point(15,19);
+        Point p1 = new Point(1,5);
+        Point p2 = new Point(2,8);
+        Point p3 = new Point(5,3);
+        Point p4 = new Point(8,9);
 
         Line l1 = new Line(p1, p2);
         Line l2 = new Line(p3, p4);
         Line l3 = new Line(l1.end, l2.start);
 
-        System.out.println(l3);
+        PolyLine pl1 = new PolyLine();
+        pl1.addPoint(p1);
+        pl1.addPoint(p2);
+        pl1.addPoint(p3);
+        pl1.addPoint(p4);
 
-        l3.start.x = 21;
-        l3.start.y = 12;
-        l3.end.x = 31;
-        l3.end.y = 17;
 
-        System.out.println(l3);
+        System.out.println(pl1.getLines());
 
-        double sum = l1.getLength() + l2.getLength() + l3.getLength();
-        System.out.println("Сумма длин: " + sum);
+        System.out.println("Длина ломаной линии: " + pl1.getLength());
+
+        List<Line> lines = pl1.getLines();
+        double sumOfLines =  0.0;
+        for (Line line : lines) {
+            sumOfLines = sumOfLines  + line.getLength();
+        }
+        System.out.println("Сумма длин  линий: " + sumOfLines);
+        System.out.println(pl1.getLength()==sumOfLines);
+
+        p2.x= 12;
+        p2.y= 8;
+        System.out.println("Новые координаты точки p2: " + p2);
+        System.out.println("Длина ломаной линии после изменения координат: " + pl1.getLength());
+        System.out.println(pl1.getLines());
     }
 }
