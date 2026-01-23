@@ -19,6 +19,7 @@ public class PolyLine {
     public double distance(Point start, Point end) {
         return Math.sqrt(Math.pow(end.x - start.x, 2) + Math.pow(end.y - start.y, 2));
     }
+
     public double getLength() {
         double length = 0.0;
         for (int i = 0; i < points.size() - 1; i++) {

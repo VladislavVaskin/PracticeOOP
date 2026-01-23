@@ -1,9 +1,9 @@
 public class Fraction {
-   private int numerator; //Числитель
-   private int denominator; //Знаменатель
+    private int numerator; //Числитель
+    private int denominator; //Знаменатель
 
     public Fraction(int numerator, int denominator) {
-        if (denominator <= 0 ) {
+        if (denominator <= 0) {
             throw new IllegalArgumentException("Знаменатель не может быть меньше или равен нулю");
         }
         this.numerator = numerator;
@@ -34,6 +34,7 @@ public class Fraction {
         reduce();
         return this;
     }
+
     public Fraction sum(int number) {
         Fraction f = new Fraction(number, 1);
         return sum(f);
