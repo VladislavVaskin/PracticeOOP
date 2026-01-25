@@ -3,13 +3,17 @@ import java.util.List;
 public class MainClass {
     public static void main(String[] args) {
 
-        Fraction f1 = new Fraction(1, 3);
-        Fraction f2 = new Fraction(2, 5);
-        Fraction f3 = new Fraction(7, 8);
-        System.out.println(f1);
-        System.out.println(f2);
-        System.out.println(f3);
+        Student student1 = new Student("Ivan");
+        Student student2 = new Student("Petr");
 
-        System.out.println(f1.sum(f2).sum(f3).minus(5));
+        student1.setGrade(2);
+        student1.setGrade(3);
+        student1.setGrade(3);
+        student1.setGrade(5);
+        student2.setGrade(4);
+
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(student1.getGrades());
     }
 }
