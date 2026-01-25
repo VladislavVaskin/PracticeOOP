@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-    final String name;
-    final List<Integer> grades;
+    private final String name;
+    private final List<Integer> grades;
 
     public Student(String name) {
         this.name = name;
