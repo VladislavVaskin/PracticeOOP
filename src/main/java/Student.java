@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Student {
@@ -11,7 +12,7 @@ public class Student {
     }
 
     public List<Integer> getGrades() {
-        return grades;
+        return Collections.unmodifiableList(grades);
     }
 
     public void setGrade(int grade) {
