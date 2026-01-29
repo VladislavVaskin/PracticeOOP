@@ -15,5 +15,10 @@ public class MainClass {
         System.out.println(student1);
         System.out.println(student2);
         System.out.println(student1.getGrades());
+
+        Point3D p1 = new Point3D(1,2,3);
+        Point3D p2 = new Point3D(4,5,6);
+        System.out.println(p1);
+        System.out.println(p2);
     }
 }
