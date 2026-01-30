@@ -52,3 +52,12 @@ public class PolyLine {
         return sb.toString();
     }
 }
+
+class ClosedPolyLine extends PolyLine {
+    @Override
+    public double getLength() {
+        double length = super.getLength();
+        length += distance(points.get(0), points.get(points.size() - 1));
+        return length;
+    }
+}
