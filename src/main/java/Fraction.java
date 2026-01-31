@@ -1,4 +1,4 @@
-public class Fraction extends Number {
+public class Fraction extends Number implements Sumable, NumberWrapper{
     private int numerator; //Числитель
     private int denominator; //Знаменатель
 
