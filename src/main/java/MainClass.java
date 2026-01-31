@@ -1,24 +1,39 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainClass {
+    public static double totalLength(List<Measurable> measurables) {
+        double total = 0.0;
+        for (Measurable measurable : measurables) {
+            total += measurable.getLength();
+        }
+        return total;
+    }
+
     public static void main(String[] args) {
 
-        Student student1 = new Student("Ivan");
-        Student student2 = new Student("Petr");
+        Point p1 = new Point(2, 5);
+        Point p2 = new Point(3, 4);
+        Point p3 = new Point(6, 8);
+        Point p4 = new Point(5, 7);
 
-        student1.setGrade(2);
-        student1.setGrade(3);
-        student1.setGrade(3);
-        student1.setGrade(5);
-        student2.setGrade(4);
+        PolyLine polyLine1 = new PolyLine();
+        polyLine1.addPoint(p1);
+        polyLine1.addPoint(p2);
+        polyLine1.addPoint(p3);
+        polyLine1.addPoint(p4);
 
-        System.out.println(student1);
-        System.out.println(student2);
-        System.out.println(student1.getGrades());
+        ClosedPolyLine closedPolyLine1 = new ClosedPolyLine();
+        closedPolyLine1.addPoint(p1);
+        closedPolyLine1.addPoint(p2);
+        closedPolyLine1.addPoint(p3);
+        closedPolyLine1.addPoint(p4);
 
-        Point3D p1 = new Point3D(1,2,3);
-        Point3D p2 = new Point3D(4,5,6);
-        System.out.println(p1);
-        System.out.println(p2);
+        List<Measurable> measurables = new ArrayList<>();
+        measurables.add(polyLine1);
+        measurables.add(closedPolyLine1);
+
+        System.out.println("Длина всех объектов: " + totalLength(measurables));
+
     }
 }

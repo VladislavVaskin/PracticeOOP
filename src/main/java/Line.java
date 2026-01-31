@@ -1,4 +1,4 @@
-public class Line {
+public class Line implements Measurable{
     public Point start;
     public Point end;
 
@@ -13,6 +13,7 @@ public class Line {
                 " до " + end.toString());
     }
 
+    @Override
     public double getLength() {
         return Math.sqrt(Math.pow(end.x - start.x, 2) + Math.pow(end.y - start.y, 2));
     }
