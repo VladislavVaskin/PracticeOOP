@@ -1,3 +1,5 @@
+package ru.courses.students;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,6 +24,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student [name=" + name + ", grades=" + grades + "]";
+        return "ru.courses.students.Student [name=" + name + ", grades=" + grades + "]";
     }
 }

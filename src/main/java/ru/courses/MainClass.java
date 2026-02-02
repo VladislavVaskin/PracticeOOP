@@ -1,3 +1,10 @@
+package ru.courses;
+
+import ru.courses.geometry.Measurable;
+import ru.courses.math.DoubleWrapper;
+import ru.courses.math.Fraction;
+import ru.courses.math.IntWrapper;
+import ru.courses.math.NumberWrapper;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,6 +1,8 @@
+package ru.courses.math;
+
 public class Fraction extends Number implements Sumable, NumberWrapper{
-    private int numerator; //Числитель
-    private int denominator; //Знаменатель
+    int numerator; //Числитель
+    int denominator; //Знаменатель
 
     public Fraction(int numerator, int denominator) {
         if (denominator <= 0) {

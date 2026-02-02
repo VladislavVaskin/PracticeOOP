@@ -1,3 +1,5 @@
+package ru.courses.geometry;
+
 public class Line implements Measurable{
     public Point start;
     public Point end;
