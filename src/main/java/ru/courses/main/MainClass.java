@@ -7,6 +7,9 @@ import ru.courses.math.IntWrapper;
 import ru.courses.math.NumberWrapper;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import static java.lang.Integer.parseInt;
+import static java.lang.Math.pow;
 
 public class MainClass {
     public static double totalLength(List<Measurable> measurables) {
@@ -25,29 +28,16 @@ public class MainClass {
         return sum;
     }
 
+    public static Integer mathPow(String x, String y) {
+        return (int) pow(parseInt(x), parseInt(y));
+    }
+
     public static void main(String[] args) {
 
-        Fraction fraction1 = new Fraction(3, 5);
-        Fraction fraction2 = new Fraction(49, 12);
-        Fraction fraction3 = new Fraction(3, 2);
-        Fraction fraction4 = new Fraction(1, 3);
+        System.out.println("Введите число X и степень Y для возведения в степень: ");
+        String x = new Scanner(System.in).next();
+        String y = new Scanner(System.in).next();
 
-        List<NumberWrapper> sum1 = new ArrayList<>();
-        sum1.add(fraction1);
-        sum1.add(new IntWrapper(2));
-        sum1.add(new DoubleWrapper(2.3));
-        System.out.println(sumAll(sum1));
-
-        List<NumberWrapper> sum2 = new ArrayList<>();
-        sum2.add(new DoubleWrapper(3.6));
-        sum2.add(fraction2);
-        sum2.add(new IntWrapper(3));
-        sum2.add(fraction3);
-        System.out.println(sumAll(sum2));
-
-        List<NumberWrapper> sum3 = new ArrayList<>();
-        sum3.add(fraction4);
-        sum3.add(new IntWrapper(1));
-        System.out.println(sumAll(sum3));
+        System.out.println("Результат возведения в степень:" + mathPow(x, y));
     }
 }
