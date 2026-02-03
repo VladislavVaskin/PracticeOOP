@@ -1,15 +1,20 @@
 package ru.courses.main;
 
 import ru.courses.geometry.Measurable;
+import ru.courses.geometry.Point;
 import ru.courses.math.DoubleWrapper;
 import ru.courses.math.Fraction;
 import ru.courses.math.IntWrapper;
 import ru.courses.math.NumberWrapper;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.pow;
+import static java.awt.Point.*;
+
 
 public class MainClass {
     public static double totalLength(List<Measurable> measurables) {
@@ -33,11 +38,21 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
+        Point p1 = new Point(1, 2);
+        Point p2 = new Point(3, 4);
+        Point p3 = new Point(5, 6);
 
-        System.out.println("Введите число X и степень Y для возведения в степень: ");
-        String x = new Scanner(System.in).next();
-        String y = new Scanner(System.in).next();
+        java.awt.Point p4 = new java.awt.Point(7, 8);
+        java.awt.Point p5 = new java.awt.Point(9, 10);
+        java.awt.Point p6 = new java.awt.Point(11, 12);
 
-        System.out.println("Результат возведения в степень:" + mathPow(x, y));
+        System.out.println("Точки из пакета ru.courses.geometry:");
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+        System.out.println("Точки из пакета java.awt:");
+        System.out.println(p4);
+        System.out.println(p5);
+        System.out.println(p6);
     }
 }
