@@ -42,6 +42,27 @@ public class PolyLine implements Measurable {
     }
 
     @Override
+    public int hashCode(){
+        int hash = 4;
+        for (Point point : points) {
+            hash = 31 * hash + point.hashCode();
+        }
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        PolyLine polyLine = (PolyLine) obj;
+        return points.equals(polyLine.points);
+    }
+
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Линия [");
         for (int i = 0; i < points.size(); i++) {
