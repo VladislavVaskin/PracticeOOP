@@ -40,19 +40,9 @@ public class MainClass {
     public static void main(String[] args) {
         Point p1 = new Point(1, 2);
         Point p2 = new Point(3, 4);
-        Point p3 = new Point(5, 6);
+        Point p3 = new Point(3, 4);
 
-        java.awt.Point p4 = new java.awt.Point(7, 8);
-        java.awt.Point p5 = new java.awt.Point(9, 10);
-        java.awt.Point p6 = new java.awt.Point(11, 12);
-
-        System.out.println("Точки из пакета ru.courses.geometry:");
-        System.out.println(p1);
-        System.out.println(p2);
-        System.out.println(p3);
-        System.out.println("Точки из пакета java.awt:");
-        System.out.println(p4);
-        System.out.println(p5);
-        System.out.println(p6);
+        System.out.println(p1.equals(p2));
+        System.out.println(p2.equals(p3));
     }
 }
