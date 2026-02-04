@@ -1,5 +1,6 @@
 package ru.courses.main;
 
+import ru.courses.geometry.Line;
 import ru.courses.geometry.Measurable;
 import ru.courses.geometry.Point;
 import ru.courses.math.DoubleWrapper;
@@ -37,12 +38,20 @@ public class MainClass {
         return (int) pow(parseInt(x), parseInt(y));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         Point p1 = new Point(1, 2);
         Point p2 = new Point(3, 4);
         Point p3 = new Point(3, 4);
+        Point p4 = new Point(2, 4);
 
-        System.out.println(p1.equals(p2));
-        System.out.println(p2.equals(p3));
+        Line l1 = new Line(p1, p2);
+        Line l2 = new Line(p3, p4);
+        Line l3 = new Line(p3, p4);
+
+        System.out.println(l1.equals(l2));
+        System.out.println(l2.equals(l3));
+
+        Line l4 = l3.clone();
+        System.out.println(l3.equals(l4));
     }
 }
